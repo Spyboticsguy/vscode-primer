@@ -69,7 +69,7 @@ You can obtain more themes from the [extension marketplace](#extensions).
 ### Learn
 This section provides a select number of resources used for learning your way around the Visual Studio Code editor.
 
-**Find and run all commands** will open up the command pallete, allowing you to search through all the commands available in the editor. You can also access the command pallete by pressing `cmd+shift+p` on Mac and `ctrl+shift+p` on Windows and Linux.
+**Find and run all commands** will open up the command pallete, allowing you to search through all the commands available in the editor. You can also access the command pallete by pressing <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>P</kbd> on Mac and <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>P</kbd> on Windows and Linux.
 
 **Interface overview** will display an overlay on top of your editor highlighting the important UI elements of the application.
 
