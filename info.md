@@ -116,6 +116,9 @@ TODO.
 ## Settings
 TODO.
 
+## Extensions
+TODO.
+
 <!--- Images go here. --->
 [welcome-screen]: img/welcome.png
 [new-file]: img/new-file.png
