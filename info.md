@@ -75,9 +75,27 @@ This section provides a select number of resources used for learning your way ar
 
 ![Interface Overview][overlay]
 
-Finally, **interactive playground** will launch a short, interactive tutorial which provides a breif overview of the code editing features of Visual Studio Code.
+Finally, **interactive playground** will launch a short, interactive tutorial which provides a brief overview of the code editing features of Visual Studio Code.
 
 ![Interactive Playground][playground]
+
+## Working in Visual Studio Code
+This is not a guide on how to use a text editor. That information is beyond the scope of this document; instead, this section will highlight some of the code editing features of Visual Studio Code.
+
+### Code Completion
+One of the most important features of any code editor is code completion, a feature which Visual Studio Code provides out-of-the-box for a number of languages, including JavaScript, TypeScript, JSON, HTML, and other web-centric languages and file formats. You can read more about the specifics of the feature (which Microsoft calls IntelliSense) in their [documentation](https://code.visualstudio.com/docs/editor/intellisense).
+
+Visual Studio Code provides the following code completion tools:
+- The ability to see variable names, functions, and common code snippets while typing
+- The ability to see the usage information of function calls, including the types of paramters accepted by the method
+- Other contextual code completion as provided by the language extension
+
+To see some of these tools in action, try out the interactive playground, found on the [Welcome](#welcome) screen.
+
+### Navigation
+Visual Studio Code provides a number of tools to move around within a file or project, which are detailed [here](https://code.visualstudio.com/docs/editor/editingevolved). These tools provide ways to jump around or between files based on the context of your code; this includes jumping to definitions of variables, functions, or classes, depending on the support provided by the language extension.
+
+The best way to learn about navigation in Visual Studio Code is to try it! Open up one of your existing projects or start a new one, then reference the documentation when you need to jump between areas in your project. See if Visual Studio Code provides a navigation tool that helps you perform that jump in an easier or quicker manner.
 
 <!--- Images go here. --->
 [welcome-screen]: img/welcome.png
