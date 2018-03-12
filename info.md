@@ -110,6 +110,11 @@ Depending on the language extension you are using, you may be able to see underl
 
 You can often mouse over these underlines to get information on the speific error in your code, or you can click the panel at the bottom of the screen (the one with a triangle and a circle with an 'x' in it) to see a list of all the errors in your code.
 
+## Debugging
+TODO.
+
+## Settings
+TODO.
 
 <!--- Images go here. --->
 [welcome-screen]: img/welcome.png
