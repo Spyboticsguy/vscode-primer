@@ -1,6 +1,6 @@
 # Visual Studio Code - A Primer
 
-[Visual Studio Code](http://code.visualstudio.com) is a cross-platform text editor built by Microsoft with features to support code development, including [debugging tools](#Debugging), [code completion](#code-completion), and syntax highlighting.
+[Visual Studio Code](http://code.visualstudio.com) is a cross-platform text editor built by Microsoft with features to support code development, including [debugging tools](#debugging), [code completion](#code-completion), and syntax highlighting.
 
 The program is built in Electron, a GitHub framework for developing cross-platform desktop applications in JavaScript. GitHub's code editor, [Atom](http://atom.io), is also written in this framework.
 
