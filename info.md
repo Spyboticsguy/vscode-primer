@@ -97,6 +97,20 @@ Visual Studio Code provides a number of tools to move around within a file or pr
 
 The best way to learn about navigation in Visual Studio Code is to try it! Open up one of your existing projects or start a new one, then reference the documentation when you need to jump between areas in your project. See if Visual Studio Code provides a navigation tool that helps you perform that jump in an easier or quicker manner.
 
+### Syntax and Error Highlighting
+Visual Studio Code and its extensions provide comprehensive support for a number of languages, including tools like highlighting to help make source navigation and code writing easier.
+
+The vast majority of programming languages on the market have a syntax highlighting extension for Visual Studio Code. They are the easiest type of language support to write, and, as a consequence, are the most readily available type of language support in the [Marketplace](#extensions).
+
+This syntax highlighting feature will assign different styles and colors depending on the type of token. These colors and styles can be customized by your current theme or in your personal [settings](#settings).
+
+Depending on the language extension you are using, you may be able to see underlines in your project when you have invalid code:
+
+![Error Highlighting][error-underlines]
+
+You can often mouse over these underlines to get information on the speific error in your code, or you can click the panel at the bottom of the screen (the one with a triangle and a circle with an 'x' in it) to see a list of all the errors in your code.
+
+
 <!--- Images go here. --->
 [welcome-screen]: img/welcome.png
 [new-file]: img/new-file.png
@@ -106,3 +120,4 @@ The best way to learn about navigation in Visual Studio Code is to try it! Open 
 [color-themes]: img/color-theme.png
 [overlay]: img/overlay.png
 [playground]: img/playground.png
+[error-underlines]: img/error-underlines.png
