@@ -188,10 +188,85 @@ The screen also includes a debugging console. The usage of this console is speci
 This serves as a very brief overview of the different tools Visual Studio Code offers for debugging. The official documentation offers information on advanced variable inspection, global launch configurations, and more. You can view the official debugging documentation [here](https://code.visualstudio.com/docs/editor/debugging).
 
 ## Settings
-TODO.
+Visual Studio Code has a comprehensive set of settings for its editor, each of which can be configured on a global level or for a specific project. Additonally, all extension settings are stored in the same file, allowing for their settings to be configured per-workspace as well.
+
+To open up your user settings, open the command pallete and type in "User Settings," then hit enter. When you type in the command pallete, Visual Studio Code will display the keyboard shortcut for opening settings on your platform.
+
+Once you open user settings, you will be greeted by the following screen:
+
+![User Settings][settings-screen]
+
+The left portion of the screen is a list of settings, their default values, and descriptions of what the setting controls.
+
+The right portion of the screen contains all of your personal settings as a JSON object. The user settings file supports IntelliSense, so you can hover over settings to see suggested and allowed values.
+
+In addition, Visual Studio Code will underline a setting if you have given it an invalid value.
+
+By clicking the pencil to the left of a setting, you can copy the setting to the right portion of the screen. From there, you can manually change the setting to your desired value.
+
+The right portion of the screen also allows you to click a small pencil icon to the left of the setting's line to see a list of accpeted values for the setting and easily switch between them.
+
+You may view the Visual Studio Code documentation on settings [here](https://code.visualstudio.com/docs/getstarted/settings).
+
+### Language-specific Settings
+In the above screen, you may have seen sections which looked like this:
+
+```json
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+```
+
+By placing settings inside of these entries, you can change settings only for a specific language. You can read more about this feature [here](https://code.visualstudio.com/docs/getstarted/settings#_language-specific-editor-settings).
+
+### Workspace Settings
+Workspace configuration files are identical in format to the user settings file, but are saved in your project root at `.vscode/settings.json`. You can access this file from the command pallete by searching for "Workspace Settings."
+
+Settings placed in this file will only apply to your current project.
 
 ## Extensions
-TODO.
+Visual Studio Code provides support for custom extensions that add new features to the editor. Recommending specific extensions is beyond the scope of this document, but this guide will explain the basics of installing and removing extensions.
+
+To open the extensions panel, press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>X</kbd> on Mac and <kbd>CTRL</kbd>+<kbd>⇧</kbd>+<kbd>X</kbd> on Windows and Linux:
+
+![Extensions Panel][extensions-panel]
+
+This will display a list of your installed extensions as well as a list of extensions recommended by Microsoft.
+
+You can use the search bar at the top of the panel to look for new extensions in the marketplace.
+
+To view a full-length description of an extension, simply click on the icon in the extension panel.
+
+![Extension Description][extensions-description]
+
+### Installing Extensions
+Once you have found an extension, you may install it by pressing the "Install" button from the extension panel or the extension's description page.
+
+This will automatically download and install the extension to your editor. Once it is installed, a small "Reload" button will replace the "Install" button. Clicking this button will reload the editor, enabling the extension immediately. If you do not press this button, the extension will not be enabled until the next time you restart the editor.
+
+### Uninstalling Extensions
+To remove an extension, type `@installed` into the search bar, followed (optionally) by the name of the extension you would like to remove.
+
+![Installed Extensions][extensions-uninstall]
+
+From here, you will see a list of your installed extensions. Clicking the gear for an extension then selecting the "Uninstall" option will remove the extension from your editor. You will need to reload your editor to fully uninstall the extension.
+
+### Other Extension Topics
+Visual Studio Code provides comprehensive documentation on how to manage extensions and information on how to write your own.
+
+If you would like to learn more about extensions, visit [this](https://code.visualstudio.com/docs/editor/extension-gallery) part of the documentation.
+
+To learn more about writing your own, visit [this](https://code.visualstudio.com/docs/extensions/overview) part of the documentation.
+
+## Read More
+The Visual Studio Code documentation is excellent and covers nearly all the uses of the editor. I would highly encourage reading through it to learn more about the editor.
+
+Intrested in learning about a specific feature? I would look at its [version control](https://code.visualstudio.com/docs/editor/versioncontrol) or [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) support.
+
+## Copyright
+
+This document and all images are copyright 2018 Tristen Allen.
+This document and all images are licensed under the [Creative Commons Attribution License, 4.0](LICENSE).
 
 <!--- Images go here. --->
 [welcome-screen]: img/welcome.png
@@ -209,3 +284,7 @@ TODO.
 [add-breakpoint]: img/add-breakpoint.png
 [function-breakpoint]: img/function-breakpoint.png
 [debug-screen]: img/debug-screen.png
+[settings-screen]: img/settings.png
+[extensions-panel]: img/extensions.png
+[extensions-description]: img/exts-descript.png
+[extensions-uninstall]: img/exts-uninstall.png
