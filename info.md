@@ -111,7 +111,81 @@ Depending on the language extension you are using, you may be able to see underl
 You can often mouse over these underlines to get information on the speific error in your code, or you can click the panel at the bottom of the screen (the one with a triangle and a circle with an 'x' in it) to see a list of all the errors in your code.
 
 ## Debugging
-TODO.
+Visual Studio Code includes a built-in debugging tool that works with Node.js out of the box. This means that you can debug applications which run in node, including TypeScript and JavaScript applications, without having to set up any additional extensions.
+
+To open the debugging panel, click the icon of a bug in the activity bar:
+
+![Debugging Panel][debugging]
+
+This panel will display a list of variables in the current scope (**Variables**), a list of expressions whose value will be calculated by the debugger (**Watch**), the current call stack of the program (**Call Stack**), and a list of breakpoints in your debugging environment (**Breakpoints**).
+
+### Setup
+Before you begin debugging, you should make sure you have an [extension](#extensions) installed for your language that includes debugging support. As an example, Microsoft publishes a [C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) which includes support for popular debuggers such as gdb and lldb.
+
+In order to debug your program, Visual Studio Code will need a configuration file detailing how to launch your program, the debugger to use, as well as other details about your debugging toolchain. In most cases, Visual Studio Code can generate this file for you.
+
+To let Visual Studio Code generate its launch configuration, open the debugging panel and then click on the gear (it should have a small orange light on it):
+
+![Tasks File][launch-setup]
+
+This will try and generate a `launch.json` file in your project workspace with a default configuration that works with your toolkit.
+
+For Go projects, the default file looks like this:
+
+![Go launch.json][go-tasks]
+
+You can further configure your launch task by adding configuration variables or changing those provided. As the default file mentions, you can use IntelliSense to find out about the different configuration values and what their functions are. You can also see descriptions of each configuration value by mousing over their entries in the configuration file.
+
+One of the most important configuration values is the `"args"` entry. This configuration value is an array of command-line arguments you want to be passed to your program when this launch configuration is used.
+
+For example, to debug `tar -x -z -f file.tgz`, you would set your `"args"` value to this:
+
+```json
+{
+    ...
+    "args": ["-x", "-z", "-f", "file.tgz"],
+    ...
+}
+```
+
+You can find more information on how to edit your launch configurations [here](https://code.visualstudio.com/docs/editor/debugging).
+
+### Adding Breakpoints
+In order to debug your program, you will likely want to add breakpoints at specific functions or lines in your code.
+
+Visual Studio Code supports adding both conditional and unconditional breakpoints.
+
+#### Unconditional Breakpoints
+The easiest breakpoints to add are unconditional. To add unconditional breakpoints, you can do one of two things:
+- Add the breakpoint at a specific line in code
+- Add the breakpoint by specifying a function name
+
+To add the breakpoint at a certain line of code, open the file you would like to add a breakpoint in, then click to the left of the line number:
+
+![Adding an inline breakpoint][add-breakpoint]
+
+To add the breakpoint at a specific function call, click the plus button in the debug panel next to **Breakpoints**, then enter in the name of the function:
+
+![Adding a function breakpoint][function-breakpoint]
+
+#### Conditional Breakpoints
+This is a more advanced topic beyond the scope of this guide. You can find more information on how to add them [here](https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics).
+
+### Running the Debugger
+Once you've set up your [breakpoints](#breakpoints) and your [launch configuration](setup), you can run the debugger by clicking the green arrow at the top of the debug panel.
+
+This will run the program until it hits a breakpoint:
+
+![Debugging Environment][debug-screen]
+
+This screen provides options for stepping over, into, or out of routines, an option to restart, resume, or stop the execution of the program, as well as information on the context of the breakpoint on the right-hand side of the screen.
+
+On the right-hand side of the screen, in the debugging panel, you can see a list of variables currently visible to the program, any **Watch** expressions you have created, and an overview of the call stack of the program.
+
+The screen also includes a debugging console. The usage of this console is specific to your debugging environment, but you can learn more about it [here](https://code.visualstudio.com/docs/editor/debugging#_debug-console-repl).
+
+### Other Debugging Topics
+This serves as a very brief overview of the different tools Visual Studio Code offers for debugging. The official documentation offers information on advanced variable inspection, global launch configurations, and more. You can view the official debugging documentation [here](https://code.visualstudio.com/docs/editor/debugging).
 
 ## Settings
 TODO.
@@ -129,3 +203,9 @@ TODO.
 [overlay]: img/overlay.png
 [playground]: img/playground.png
 [error-underlines]: img/error-underlines.png
+[debugging]: img/debugging.png
+[launch-setup]: img/launch-setup.png
+[go-tasks]: img/go-tasks.png
+[add-breakpoint]: img/add-breakpoint.png
+[function-breakpoint]: img/function-breakpoint.png
+[debug-screen]: img/debug-screen.png
