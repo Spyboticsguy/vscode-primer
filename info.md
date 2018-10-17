@@ -172,7 +172,7 @@ To add the breakpoint at a specific function call, click the plus button in the 
 This is a more advanced topic beyond the scope of this guide. You can find more information on how to add them [here](https://code.visualstudio.com/docs/editor/debugging#_advanced-breakpoint-topics).
 
 ### Running the Debugger
-Once you've set up your [breakpoints](#breakpoints) and your [launch configuration](setup), you can run the debugger by clicking the green arrow at the top of the debug panel.
+Once you've set up your [breakpoints](#breakpoints) and your [launch configuration](#setup), you can run the debugger by clicking the green arrow at the top of the debug panel.
 
 This will run the program until it hits a breakpoint:
 
